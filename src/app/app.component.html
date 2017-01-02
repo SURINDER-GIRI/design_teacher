@@ -1,3 +1,50 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-layout fullscreen style="background:transparent">
+<md-sidenav #sidenav mode="{{mod}}"  opened="{{sid}}"  style="width:250px">
+  <md-nav-list>
+
+    <div class="col-xs-12 grad">
+    <div class="col-xs-8 col-xs-offset-2"> 
+        <img src="../assets/img/admin.png" class="img-responsive">
+        </div>
+        <div class="col-xs-12"> 
+        <h4 class="text-center " style="color:#fff">Admin Panel</h4>
+    </div>
+      </div>
+        <a routerLink="/userdetail" md-list-item >
+          <md-icon md-list-icon>email</md-icon>
+            <span md-line>UserDetail</span>
+              <span md-line class="secondary">Description</span>
+        </a>
+        <a md-list-item >
+          <md-icon md-list-icon>email</md-icon>
+            <span md-line>Name</span>
+              <span md-line class="secondary">Description</span>
+        </a>
+        
+  </md-nav-list>
+
+  </md-sidenav>
+    <div layout="column" layout-fill style="display:flex;justify-content:space-around">
+    <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5"  class="grad"   >
+    <button md-icon-button aria-label="Settings" md-ripple (click)="sidenav.open()" style="margin-top:10px;">
+    <md-icon > apps</md-icon>
+    </button>
+     <span class="app-toolbar-filler"></span>
+    <button md-icon-button [md-menu-trigger-for]="menu" flex layout="row" layoutt-align="end center" >
+    <md-icon style="margin-top:10px;font-size:24px;">more_vert</md-icon>
+    </button>
+    <span flex></span>
+    <md-menu x-position="before"  #menu>
+    <button md-menu-item *ngIf="path == '/userdetail' " >Login</button> 
+    <a routerLink="/chat" >
+    <button md-menu-item >Chat</button>
+    </a>
+    <button md-menu-item>Logout</button>
+    </md-menu>
+    </md-toolbar>
+    </div>  
+      
+
+      <router-outlet></router-outlet> 
+   
+</md-sidenav-layout>  

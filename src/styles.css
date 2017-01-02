@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';	
+ ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background: #e5e5e5;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: #EF7846; 
+}
+
+ ::scrollbar {
+    width: 12px;
+}
+ 
+::scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    background: #e5e5e5;
+}
+ 
+::scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    background: #EF7846; 
+}
+
+.mainloader
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content:center;
+
+}
+.bgImg
+{
+ background: url("assets/img/book.png");
+ background-size:cover ;
+ background-position:fixed ;
+
+}
+
+.file_input_div {
+  margin: auto;
+  width: 250px;
+  height: 40px;
+}
+
+.file_input {
+  float: left;
+}
+
+#file_input_text_div {
+  width: 200px;
+  margin-top: -8px;
+  margin-left: 5px;
+}
+
+.none {
+  display: none;
+}
+.img-back1
+{
+	background: url("assets/img/d_card.png");
+	height:200px;
+	padding: 0px;
+}
+
+.img-back2
+{
+	background: url("assets/img/masas.png");
+	background-size: cover;
+	background-position: center;
+	height:200px;
+	padding: 0px;
+}
+.grad
+{
+	margin-top:-10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6b92e0+27,db36a4+97,db36a4+99 */
+background: rgb(107,146,224); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(107,146,224,1) 27%, rgba(219,54,164,1) 97%, rgba(219,54,164,1) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(107,146,224,1) 27%,rgba(219,54,164,1) 97%,rgba(219,54,164,1) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(107,146,224,1) 27%,rgba(219,54,164,1) 97%,rgba(219,54,164,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b92e0', endColorstr='#db36a4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.card{
+	height: 650px;
+}
+.form :focus{
+		color:#000;
+}
+@media screen and (min-width: 240px) and (max-width: 768px) {
+ 	.card{
+	height: 1200px;
+}   
+}
